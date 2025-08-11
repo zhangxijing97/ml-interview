@@ -3,7 +3,7 @@
 ## Supervised Learning
 A type of machine learning where each training example has both input features **X** and a known output label **y**. The goal is to learn a function \( f: X \rightarrow y \) that can predict labels for new, unseen data.
 
-**Common algorithms:**  
+Common algorithms:
 - Linear Regression  
 - Logistic Regression  
 - Decision Trees / Random Forest  
@@ -15,7 +15,7 @@ A type of machine learning where each training example has both input features *
 ## Unsupervised Learning
 A type of machine learning where the data has only input features **X**, but no labels **y**. The goal is to find hidden patterns, structures, or groupings in the data.
 
-**Common algorithms:**  
+Common algorithms:
 - K-Means Clustering  
 - Hierarchical Clustering  
 - DBSCAN  
@@ -24,3 +24,25 @@ A type of machine learning where the data has only input features **X**, but no 
 - Independent Component Analysis (ICA)  
 - Autoencoders  
 - t-SNE / UMAP  
+
+## What is semi-supervised machine learning?
+
+**Definition:**  
+Semi-supervised learning combines supervised and unsupervised learning by training on a small labeled dataset together with a large unlabeled dataset.  
+
+It works under three key assumptions:  
+- **Continuity** – Nearby points are likely to share the same label.  
+- **Cluster** – Data forms natural clusters, and points in the same cluster share the same label.  
+- **Manifold** – Data lies on a lower-dimensional structure, so decision boundaries should follow that shape.  
+
+**Example:**  
+Imagine you want to classify cats and dogs. You have 10 labeled photos (5 cats, 5 dogs) and 1,000 unlabeled photos.  
+1. Train a model on the 10 labeled images.  
+2. Use it to predict labels for the 1,000 unlabeled images.  
+3. Keep only high-confidence predictions (e.g., “cat” with 95% probability) and add them to the training set.  
+4. Retrain the model, now with much more data, to achieve better accuracy while minimizing labeling cost.  
+
+**Common applications:**  
+- Speech recognition  
+- Medical image classification  
+- Self-driving cars
