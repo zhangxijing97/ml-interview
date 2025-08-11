@@ -1,6 +1,8 @@
 # ml-interview
 
 ## Supervised Learning
+
+**Definition:** 
 A type of machine learning where each training example has both input features **X** and a known output label **y**. The goal is to learn a function \( f: X \rightarrow y \) that can predict labels for new, unseen data.
 
 Common algorithms:
@@ -13,6 +15,8 @@ Common algorithms:
 - Neural Networks (for classification/regression)  
 
 ## Unsupervised Learning
+
+**Definition:** 
 A type of machine learning where the data has only input features **X**, but no labels **y**. The goal is to find hidden patterns, structures, or groupings in the data.
 
 Common algorithms:
@@ -24,6 +28,36 @@ Common algorithms:
 - Independent Component Analysis (ICA)  
 - Autoencoders  
 - t-SNE / UMAP  
+
+## Reinforcement Learning
+
+**Definition:**  
+Reinforcement Learning (RL) is a type of machine learning where an **agent** learns by **interacting** with an **environment**.  
+At each step:  
+1. The agent observes the current **state**.  
+2. Chooses an **action** based on its **policy**.  
+3. The environment responds with a **reward** and a **next state**.  
+4. The agent updates its policy to maximize the total expected future reward.
+
+**Key components:**  
+- **Agent** → The learner or decision maker (e.g., a robot, game AI).  
+- **Environment** → The world the agent interacts with (e.g., maze, game board).  
+- **State** → The current situation of the environment.  
+- **Action** → A choice the agent can make.  
+- **Reward** → Feedback signal (+/-) guiding the agent toward better behavior.  
+- **Policy** → The strategy that maps states to actions.
+
+**Example – Snake Game AI:**  
+1. **State:** Snake's position, food position, and current direction.  
+2. **Action:** Move up, down, left, or right.  
+3. **Reward rules:**  
+   - Eat food → +10 points  
+   - Hit wall or itself → -100 points  
+   - Normal move → -0.1 points (discourages stalling)  
+4. **Learning process:**  
+   - The agent starts with random moves.  
+   - After each move, it gets a reward and sees the new state.  
+   - Over many games, it adjusts its po
 
 ## What is semi-supervised machine learning?
 
