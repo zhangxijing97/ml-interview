@@ -80,3 +80,93 @@ Imagine you want to classify cats and dogs. You have 10 labeled photos (5 cats, 
 - Speech recognition  
 - Medical image classification  
 - Self-driving cars
+
+## How to Choose Which Algorithm to Use for a Dataset
+
+Choosing an algorithm depends on both the **dataset** and the **business/application requirements**. You can apply supervised and unsupervised learning to the same data.
+
+**General guidelines:**
+- **Supervised learning** → Requires **labeled data**.  
+  - **Regression** → Target is continuous numerical values (e.g., price, temperature).  
+  - **Classification** → Target is categorical (e.g., spam/ham, cat/dog).  
+- **Unsupervised learning** → Requires **unlabeled data** (e.g., clustering, dimensionality reduction).  
+- **Semi-supervised learning** → Requires a combination of **labeled and unlabeled data**.  
+- **Reinforcement learning** → Requires an **environment**, **agent**, **state**, and **reward** for learning through interaction.
+
+## K Nearest Neighbor (KNN)
+
+**Definition:**  
+KNN is a **supervised**, **non-parametric** algorithm used for **classification** and **regression**.  
+It predicts based on the labels of the **K closest data points** in the training set, without assuming any data distribution.
+
+**How it works (classification):**  
+1. Choose **K** (e.g., K=5).  
+2. Calculate the **distance** (commonly Euclidean) from the new point to all labeled points.  
+3. Select the **K nearest neighbors**.  
+4. Assign the label by **majority vote** among the K neighbors.  
+
+**Example:**  
+If K=5 and the 5 nearest neighbors include **3 red** and **2 green**, the new point is labeled **red**.
+
+## Feature Importance in Machine Learning
+
+**Definition:**  
+Feature importance measures how much each input feature contributes to predicting the target variable.  
+It helps us:  
+- Identify which features are most useful  
+- Understand data structure and model behavior  
+- Simplify the model and improve interpretability  
+
+## Feature Importance in Machine Learning
+
+**Definition:**  
+Feature importance measures how much each input feature contributes to predicting the target variable.  
+It helps us:  
+- Identify which features are most useful  
+- Understand data structure and model behavior  
+- Simplify the model and improve interpretability  
+
+**Common methods to determine feature importance:**
+
+1. **Model-based Importance**  
+   - Some models (e.g., Decision Tree, Random Forest) have built-in importance scores.  
+   - Example: Random Forest calculates the **decrease in node impurity** (Gini/entropy) weighted by the probability of reaching that node, averaged over all trees.  
+
+2. **Permutation Importance**  
+   - Shuffle a feature’s values in the validation set and measure the drop in model performance.  
+   - A larger drop means the feature is more important.  
+
+3. **SHAP (SHapley Additive Explanations)**  
+   - Based on game theory, measures each feature’s contribution to a single prediction.  
+   - Works well for complex models like gradient boosting or neural networks.  
+
+4. **Correlation Coefficients**  
+   - Compute correlation (e.g., Pearson, Spearman) between a feature and the target variable.  
+   - Useful for quick checks, but only captures linear or monotonic relationships.  
+
+**Uses of feature importance:**
+- **Model optimization:** Remove low-importance features to reduce overfitting.  
+- **Interpretability:** Explain model decisions to stakeholders.  
+- **Data analysis:** Identify factors most related to the target.
+
+## Overfitting in Machine Learning
+
+**Definition:**  
+Overfitting occurs when a model performs well on training data but fails to generalize to unseen data because it has **memorized the training data** instead of learning the underlying patterns.
+
+**How to avoid overfitting:**
+1. **Cross-validation** – Evaluate the model on multiple train/validation splits to ensure generalization.  
+2. **Regularization (L1, L2)** – Add penalty terms to the loss function to prevent overfitting model parameters.  
+3. **Reduce model complexity** – Use simpler models or limit parameters (e.g., prune decision trees, reduce neural network layers).  
+4. **Collect more data / Data augmentation** – Increase training data volume or synthetically generate variations to improve robustness.
+
+## Overfitting in Machine Learning
+
+**Definition:**  
+Overfitting occurs when a model performs well on training data but fails to generalize to unseen data because it has **memorized the training data** instead of learning the underlying patterns.
+
+**How to avoid overfitting:**
+1. **Cross-validation** – Evaluate the model on multiple train/validation splits to ensure generalization.  
+2. **Regularization (L1, L2)** – Add penalty terms to the loss function to prevent overfitting model parameters.  
+3. **Reduce model complexity** – Use simpler models or limit parameters (e.g., prune decision trees, reduce neural network layers).  
+4. **Collect more data / Data augmentation** – Increase training data volume or synthetically generate variations to improve robustness.
