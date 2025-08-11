@@ -170,3 +170,28 @@ Overfitting occurs when a model performs well on training data but fails to gene
 2. **Regularization (L1, L2)** – Add penalty terms to the loss function to prevent overfitting model parameters.  
 3. **Reduce model complexity** – Use simpler models or limit parameters (e.g., prune decision trees, reduce neural network layers).  
 4. **Collect more data / Data augmentation** – Increase training data volume or synthetically generate variations to improve robustness.
+
+## What is the difference between supervised and unsupervised learning?
+
+- **Supervised Learning:** The model is trained on labeled data, where the target variable is known. Examples include classification and regression.
+- **Unsupervised Learning:** The model is trained on unlabeled data to find patterns or groupings. Examples include clustering and dimensionality reduction.
+
+## What is a confusion matrix, and why is it useful?
+
+A confusion matrix is a table used to evaluate the performance of a classification model. It shows the counts of true positives, true negatives, false positives, and false negatives. It is useful for calculating metrics like accuracy, precision, recall, and F1 score.
+
+## What is the difference between parametric and non-parametric models?
+
+- **Parametric Models:** These make assumptions about the data’s underlying distribution and have a fixed number of parameters (e.g., Linear Regression).
+
+- **Non-Parametric Models:** These make no assumptions about data distribution and can adapt to complexity as more data is added (e.g., K-Nearest Neighbors).
+
+## What is the bias-variance tradeoff in machine learning?
+
+The bias-variance tradeoff refers to the balance between a model’s ability to capture complex patterns (low bias) and its sensitivity to fluctuations in the training data (low variance). A good model achieves a balance by minimizing both bias and variance to avoid underfitting and overfitting.
+
+## Is it true that we need to scale our feature values when they vary greatly?
+
+Yes. Most of the algorithms use Euclidean distance between data points, and if the feature value varies greatly, the results will be quite different. In most cases, outliers cause machine learning models to perform worse on the test dataset.
+
+We also use feature scaling to reduce convergence time. It will take longer for gradient descent to reach local minima when features are not normalized.
